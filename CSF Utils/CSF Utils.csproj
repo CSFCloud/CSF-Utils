@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageId>CSFCloud.Utils</PackageId>
+    <Version>0.0.4</Version>
+    <Authors>CSFCloud</Authors>
+    <Company>CSFCloud</Company>
+    <Product>CSF Utils</Product>
+    <PackageIconUrl>https://dashboard.csfcloud.com/img/logo.png</PackageIconUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>CSFCloud basic utilities</Description>
   </PropertyGroup>
 
 </Project>
