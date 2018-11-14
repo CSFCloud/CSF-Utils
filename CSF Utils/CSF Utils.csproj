@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <PackageId>CSFCloud.Utils</PackageId>
-    <Version>0.0.5</Version>
+    <Version>0.0.6</Version>
     <Authors>CSFCloud</Authors>
     <Company>CSFCloud</Company>
     <Product>CSF Utils</Product>
@@ -11,6 +11,8 @@
     <NeutralLanguage>en</NeutralLanguage>
     <Description>CSFCloud basic utilities</Description>
     <RepositoryUrl>https://github.com/CSFCloud/CSF-Utils</RepositoryUrl>
+    <AssemblyVersion>0.0.6.0</AssemblyVersion>
+    <FileVersion>0.0.6.0</FileVersion>
   </PropertyGroup>
 
 </Project>
