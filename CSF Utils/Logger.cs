@@ -6,9 +6,6 @@ namespace CSFCloud.Utils {
 
     public static class Logger {
 
-        private static LogLevel LastLogLevel = LogLevel.None;
-        private static string Prefix;
-
 #if DEBUG
         public static bool VerboseLogging = true;
 #else
@@ -16,37 +13,35 @@ namespace CSFCloud.Utils {
 #endif
 
         private static void Echo(LogLevel level, string msg) {
-            if (LastLogLevel != level) {
-                LastLogLevel = level;
+            string Prefix;
 
-                Console.BackgroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.Black;
 
-                switch (level) {
-                    case LogLevel.Debug:
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                        Prefix = "DEBUG";
-                        break;
-                    case LogLevel.Info:
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                        Prefix = "INFO";
-                        break;
-                    case LogLevel.Warning:
-                        Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Prefix = "WARNING";
-                        break;
-                    case LogLevel.Error:
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Prefix = "ERROR";
-                        break;
-                    case LogLevel.Important:
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        Prefix = "IMPORTANT";
-                        break;
-                    default:
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                        Prefix = "???";
-                        break;
-                }
+            switch (level) {
+                case LogLevel.Debug:
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Prefix = "DEBUG";
+                    break;
+                case LogLevel.Info:
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Prefix = "INFO";
+                    break;
+                case LogLevel.Warning:
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Prefix = "WARNING";
+                    break;
+                case LogLevel.Error:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Prefix = "ERROR";
+                    break;
+                case LogLevel.Important:
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Prefix = "IMPORTANT";
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Prefix = "???";
+                    break;
             }
 
             Console.WriteLine($"[{DateTime.Now.ToString("HH:mm:ss.ffffff")} {Prefix}] {msg}");
